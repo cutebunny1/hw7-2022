@@ -45,7 +45,27 @@ document.querySelector("#skip").addEventListener("click", function() {
 	// how do we get it to loop? bc right now it just stops once i get to the end unless i hit skip ahead again 
 });
 
-// Speed is 
-// Skip ahead
-// Video current time is
-// Speed up Video
+// Mute and Unmute
+document.querySelector("#mute").addEventListener("click", function() {
+	console.log("Mute");
+	video.muted = true;
+	document.querySelector('#mute').innerHTML = 'Mute';
+	// how to get these to run separately ?
+	if (video.muted = true) {
+		console.log("Unmute");
+		video.muted = false;
+		document.querySelector('#mute').innerHTML = 'Unmute';
+	}
+});
+
+// Volume Slider
+document.querySelector("#slider").addEventListener("click", function() {
+	document.querySelector('#slider').innerHTML = this.value/100;
+	console.log("The current value is " + this.value/100);
+	document.querySelector("#volume").innerHTML = this.value + "%"
+	// do we need to do innerhtml for this one?
+	// not sure if I did any of this right tbh
+});
+
+// Styled
+// Original
