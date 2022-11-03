@@ -1,7 +1,9 @@
 // var video = document.getElementById("player1");
 var video = document.querySelector("#player1");
+// var video;
 
 window.addEventListener("load", function() {
+	// video = document.querySelector("#player1");
 	console.log("Good job opening the window")
 	video.autoplay = false;
 	console.log("Auto play is set to " + video.autoplay)
@@ -46,38 +48,44 @@ document.querySelector("#skip").addEventListener("click", function() {
 });
 
 // Mute and Unmute
-document.querySelector("#mute").addEventListener("click", function() {
-	console.log("Mute");
-	video.muted = true;
-	document.querySelector('#mute').innerHTML = 'Mute';
-	// how to get these to run separately ?
-	if (video.muted = true) {
-		console.log("Unmute");
-		video.muted = false;
-		document.querySelector('#mute').innerHTML = 'Unmute';
-	}
-});
+// document.querySelector("#mute").addEventListener("click", function() {
+// 	console.log("Mute");
+// 	video.muted = true;
+// 	document.querySelector('#mute').innerHTML = 'Mute';
+// 	// how to get these to run separately ?
+// 	if (video.muted==true) {
+// 		console.log("Unmute");
+// 		video.muted = false;
+// 		document.querySelector('#mute').innerHTML = 'Unmute';
+// 	}
+// });
 
 // Volume Slider
+// document.querySelector("#slider").addEventListener("click", function() {
+// 	video.volume = this.value/100;
+// 	console.log("The current value is " + video.volume);
+// 	document.querySelector("#volume").innerHTML = video.volume*100 + "%"
+// });
+
 document.querySelector("#slider").addEventListener("click", function() {
-	document.querySelector('#slider').innerHTML = this.value/100;
-	console.log("The current value is " + this.value/100);
-	document.querySelector("#volume").innerHTML = this.value + "%"
-	// do we need to do innerhtml for this one?
-	// not sure if I did any of this right tbh
+	console.log("The current value is", video.volume)
+	video.volume = this.value/100
+	console.log("The current value is", video.volume)
+	console.log(document.querySelector("#volume"))
+	document.querySelector("#volume").innerHTML= video.volume *100 + "%"
 });
 
 // Styled
 // Utilize the existing oldSchool class on the video element
-document.querySelector("#vintage").addEventListener("click", function() {
-	video.oldSchool = true;
-	console.log("Styled");
-});
+// document.querySelector("#vintage").addEventListener("click", function() {
+// 	video.oldSchool = true;
+// 	console.log("Styled");
+// });
 
 // Original
 // Remove the oldSchool class from the video.
-document.querySelector("#orig").addEventListener("click", function() {
-	video.oldSchool = false;
-	console.log("Original");
-});
+// document.querySelector("#orig").addEventListener("click", function() {
+// 	video.oldSchool = false;
+// 	console.log("Original");
+// });
 
