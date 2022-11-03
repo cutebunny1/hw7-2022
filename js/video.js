@@ -68,4 +68,16 @@ document.querySelector("#slider").addEventListener("click", function() {
 });
 
 // Styled
+// Utilize the existing oldSchool class on the video element
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.oldSchool = true;
+	console.log("Styled");
+});
+
 // Original
+// Remove the oldSchool class from the video.
+document.querySelector("#orig").addEventListener("click", function() {
+	video.oldSchool = false;
+	console.log("Original");
+});
+
