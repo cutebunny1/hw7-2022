@@ -78,5 +78,11 @@ document.querySelector("#orig").addEventListener("click", function() {
 	video.classList.remove("oldSchool");
 });
 
-// Deeper Questions
-// slider isn't accessible, allow it to come into focus
+// Deeper Questions:
+// 1. Yes, I could add something that shows the current runtime of the video. The currentTime property sets or returns the current position (in seconds) of the audio/video playback.
+
+// 2. Yes, I believe it is possible to have the video element show a thumbnail. I am not entirely sure how that would work, but stack overflow and google say it is possible.
+
+// 3. Yes, we can use a different video and get it to work.
+
+// 4. The player and slider are keyboard-accessible. But, they are hard to navigate with and for mouse users, the buttons are too far apart and inconvenient. We also should allow the slider to come into focus, which it does not currently do. So, ultimately I would say they are not accessible.
